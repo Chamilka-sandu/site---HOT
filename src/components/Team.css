@@ -57,6 +57,7 @@ body {
     opacity: 0;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    line-height: 200px !important;
 }
 .team-member:hover .team-hover .desk {
     top: 35%;
