@@ -10,8 +10,8 @@ const images = [
     title: "Cane",
     width: "25%",
     link: "./cane",
-    //href:"./bathik",
   },
+  
   {
     url: "/img/pottery.jpg",
     title: "Pottery",
@@ -57,6 +57,8 @@ const images = [
     url: "/img/drums.jpg",
     title: "Drums",
     width: "25%",
+    link: "./drums",
+
   },
   {
     url: "/img/coir.jpg",

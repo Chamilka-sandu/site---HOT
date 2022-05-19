@@ -2,27 +2,27 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../../database/firebase-config";
 import { doc, getDoc } from "@firebase/firestore";
-import "./bathik.css";
+import "./drums.css";
 
 import { useUserAuth } from "../../../context/UserAuthContext";
 import { Navigation } from "../../navigation";
 import GoogleMapComponent from "../../map/googlemapComponent";
 
 
-const BathikDetails = () => {
+const DrumsDetails = () => {
   let params = useParams();
 
   const { user } = useUserAuth();
 
-  const [bathikDetails, setBathikDetails] = useState(null);
+  const [drumsDetails, setDrumsDetails] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(async () => {
     const docRef = doc(db, "Enterprises", params.docId);
     const docSnap = await getDoc(docRef);
 
-    if (docSnap.exists()) setBathikDetails(docSnap.data());
-    else setBathikDetails(null);
+    if (docSnap.exists()) setDrumsDetails(docSnap.data());
+    else setDrumsDetails(null);
 
     setLoading(false);
   }, []);
@@ -39,7 +39,7 @@ const BathikDetails = () => {
         <div class="media align-items-end profile-head">
           <div class="profile mr-6" >
             <img
-              src={bathikDetails.image}
+              src={DrumsDetails.image}
               alt="..."
               width="600" height="200"
               class="rounded mb-2 img-thumbnail"
@@ -47,7 +47,7 @@ const BathikDetails = () => {
            
             <br></br>
             <div class="px-4 py-3">
-          <h4 class="mb-0">Since {bathikDetails.since}</h4>
+          <h4 class="mb-0">Since {drumsDetails.since}</h4>
           </div>
           </div>
          
@@ -59,7 +59,7 @@ const BathikDetails = () => {
           <h4 class="mb-0">About</h4>
           <div class="p-4 rounded shadow-sm" style={{textAlign:'justify'}}>
             <p class="fs-5 mb-0">
-            {bathikDetails.description}
+            {drumsDetails.description}
             <br></br></p>
           </div>
         </div>
@@ -98,7 +98,7 @@ const BathikDetails = () => {
                   </div>
                   <div class="ms-4" >
                     <h6 class="font-weight-medium">Address</h6>
-                    <p class="">{bathikDetails.address}</p>
+                    <p class="">{drumsDetails.address}</p>
                   </div>
                 </div>
               </div>
@@ -110,14 +110,14 @@ const BathikDetails = () => {
                   </div>
                   <div class="ms-4">
                     <h6 class="font-weight-medium">Phone</h6>
-                    <p class="">{bathikDetails.phone}</p>
+                    <p class="">{drumsDetails.phone}</p>
                   </div>
                 </div>
               </div>
               <div class="col-lg-2 col-md-2" ></div>
               <GoogleMapComponent
-        lat={bathikDetails.location._lat}
-        long={bathikDetails.location._long}
+        lat={drumsDetails.location._lat}
+        long={drumsDetails.location._long}
       />
             </div>
           </div>
@@ -155,7 +155,7 @@ const BathikDetails = () => {
   );
 };
 
-export default BathikDetails;
+export default DrumsDetails;
 
 
 

@@ -18,6 +18,21 @@ import ImageUpload from "./components/ImageUpload";
 
 import Cane from "./components/enterprise/cane/cane";
 import Bathik from "./components/enterprise/bathik/bathik";
+import Drums from "./components/enterprise/drums/drums";
+// import Brass from "./components/enterprise/brass/brass";
+// import Carving from "./components/enterprise/carvings/carvings";
+// import Coir from "./components/enterprise/coir/coir";
+// import Handloom from "./components/enterprise/handloon/handloom";
+// import Laksha from "./components/enterprise/laksha/laksha";
+// import Masks from "./components/enterprise/masks/masks";
+// import Pottery from "./components/enterprise/pottery/pottery";
+// import Beeralu from "./components/enterprise/beeralu/beeralu";
+
+import BathikDetails from "./components/enterprise/bathik/bathikDetails";
+import DrumsDetails from "./components/enterprise/drums/drumsDetails";
+
+
+
 
 import AdHome from "./components/admin/Home";
 import AUser from "./components/admin/NewUser";
@@ -25,7 +40,6 @@ import WidgetLg from "./components/admin/WidgetLg";
 import WidgetSm from "./components/admin/WidgetSm";
 import DonationReport from "./components/admin/feedback";
 import ANewUser from "./components/admin/login";
-import BathikDetails from "./components/enterprise/bathik/bathikDetails";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -46,6 +60,11 @@ function App() {
 
             <Route exact path="/cane" element={<Cane />} />
             <Route exact path="/bathik" element={<Bathik />} />
+            <Route exact path="/drums" element={<Drums />} />
+            {/* <Route exact path="/brass" element={<Brass />} /> */}
+
+
+
             <Route exact path="/team" element={<Team />} />
             <Route exact path="/profiles" element={<EnterpriseProfile />} />
 
@@ -55,17 +74,19 @@ function App() {
               element={<BathikDetails />}
             />
 
+            <Route
+              exact
+              path="/drumsDetails/:docId"
+              element={<DrumsDetails />}
+            />
+
             {/* <Route
               exact
-              path="/donation"
-              element={
-                <ProtectedRoute>
-                  <Donation />
-                </ProtectedRoute>
-              }
+              path="/brassDetails/:docId"
+              element={<BrassDetails />}
             /> */}
 
-            {/* ADMIN */}
+
 
             <Route exact path="/alogin" element={<ANewUser />} />
             <Route
