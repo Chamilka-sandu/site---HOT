@@ -2,25 +2,25 @@ import React, { useEffect, useState } from "react";
 import { Navigation } from "../../navigation";
 import { db } from "../../../database/firebase-config";
 import { collection, where, query, onSnapshot } from "@firebase/firestore";
-import "./brass.css";
+import "./masks.css";
 import bathikImg from "../../../data/img/b1.jpg";
-import BrassTile from "./brassTile";
+import MasksTile from "./masksTile";
 
 
-function Brass({ children }) {
-  const [brassList, setBrassList] = useState([]);
+function Masks({ children }) {
+  const [masksList, setMasksList] = useState([]);
 
   useEffect(() => {
     const q = query(
       collection(db, "Enterprises"),
-      where("type", "==", "brass")
+      where("type", "==", "masks")
     );
 
     onSnapshot(q, (querySnapshot) => {
       querySnapshot.docs.map((doc) => {
-        const brassData = doc.data();
-        brassData.docId = doc.id;
-        setBrassList((arr) => [...arr, brassData]);
+        const masksData = doc.data();
+        masksData.docId = doc.id;
+        setMasksList((arr) => [...arr, masksData]);
       });
     });
   }, []);
@@ -48,7 +48,7 @@ function Brass({ children }) {
           id="header "
           class="jumbotron text-center"
         >
-          <h1 class="display-3">BRASS </h1>
+          <h1 class="display-3">MASKS </h1>
           <p class="lead">Marvel in the wonders of eclectic designs and patterns.</p>
         </section>
       </div>
@@ -61,9 +61,9 @@ function Brass({ children }) {
         <section id="gallery">
           <div class="container">
             <div class="row">
-              {brassList &&
-                brassList.map((brass, index) => {
-                  return <BrassTile key={index} brass={brass} />;
+              {masksList &&
+                masksList.map((masks, index) => {
+                  return <MasksTile key={index} masks={masks} />;
                 })}
             </div>
           </div>
@@ -73,4 +73,4 @@ function Brass({ children }) {
   );
 }
 
-export default Brass;
+export default Masks;

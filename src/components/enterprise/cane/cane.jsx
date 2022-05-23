@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Navigation_log } from "../../navigation_log";
+import { Navigation } from "../../navigation";
 import { db } from "./../../../database/firebase-config";
 import { collection, where, query, onSnapshot } from "@firebase/firestore";
 import "./cane.css";
-import bathikImg from "../../../data/img/b1.jpg";
+import bathikImg from "../../../data/img/Hcane.jpg";
 import CaneTile from "./caneTile";
 
 // import { Description } from "../../Description";
@@ -35,7 +35,7 @@ function Cane({ children }) {
   return (
     <div>
       <div>
-        <Navigation_log />
+        <Navigation />
       </div>
 
       <div class="row">

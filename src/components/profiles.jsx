@@ -16,16 +16,22 @@ const images = [
     url: "/img/pottery.jpg",
     title: "Pottery",
     width: "25%",
+    link: "./pottery",
+
   },
   {
     url: "/img/masks.jpg",
     title: "Masks",
     width: "25%",
+    link: "./masks",
+
   },
   {
     url: "/img/handloom.jpg",
     title: "Handloom",
     width: "25%",
+    link: "./handloom",
+
   },
   {
     url: "/img/bathik.jpg",
@@ -56,6 +62,8 @@ const images = [
     url: "/img/beeralu.jpg",
     title: "Beeralu",
     width: "25%",
+    link: "./beeralu",
+
   },
   {
     url: "/img/drums.jpg",
@@ -68,6 +76,8 @@ const images = [
     url: "/img/coir.jpg",
     title: "Coir",
     width: "25%",
+    link: "./coir",
+
   },
   {
     url: "/img/others.jpg",

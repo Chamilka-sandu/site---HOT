@@ -69,12 +69,12 @@ export const Navigation = () => {
                 className="nav-link active px-13 text-uppercase"
                 aria-current="page"
               >
-                <Link to="profiles" spy={true} smooth={true}>
+                <Link to="/profiles" spy={true} smooth={true} >
                   Enterprises
                 </Link>
               </a>
             </li>
-            
+
             <li className="nav-item px-3">
               <Link
                 to="/team"
