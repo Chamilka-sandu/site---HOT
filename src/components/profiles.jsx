@@ -56,6 +56,8 @@ const images = [
     url: "/img/laksha.png",
     title: "Laksha",
     width: "25%",
+    link: "./Laksha",
+
    
   },
   {

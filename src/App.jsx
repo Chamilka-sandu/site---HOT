@@ -20,7 +20,7 @@ import Brass from "./components/enterprise/brass/brass";
 import Carving from "./components/enterprise/carving/carving";
 import Coir from "./components/enterprise/coir/coir";
 import Handloom from "./components/enterprise/handloom/handloom";
-// import Laksha from "./components/enterprise/laksha/laksha";
+import Laksha from "./components/enterprise/laksha/laksha";
 import Masks from "./components/enterprise/masks/masks";
 import Pottery from "./components/enterprise/pottery/pottery";
 import Beeralu from "./components/enterprise/beeralu/beeralu";
@@ -31,7 +31,7 @@ import DrumsDetails from "./components/enterprise/drums/drumsDetails";
 import BrassDetails from "./components/enterprise/brass/brassDetails";
 import CarvingDetails from "./components/enterprise/carving/carvingDetails";
 import HandloomDetails from "./components/enterprise/handloom/handloomDetails";
-// import LakshaDetails from "./components/enterprise/laksha/lakshaDetails";
+import LakshaDetails from "./components/enterprise/laksha/lakshaDetails";
 import MasksDetails from "./components/enterprise/masks/masksDetails";
 import PotteryDetails from "./components/enterprise/pottery/potteryDetails";
 import BeeraluDetails from "./components/enterprise/beeralu/beeraluDetails";
@@ -70,8 +70,8 @@ function App() {
             <Route exact path="/beeralu" element={<Beeralu />} />
             <Route exact path="/masks" element={<Masks />} />
             <Route exact path="/coir" element={<Coir />} />
-             {/* <Route exact path="/laksha" element={<Laksha />} />
-             */}
+            <Route exact path="/laksha" element={<Laksha />} />
+
 
 
 
@@ -130,13 +130,13 @@ function App() {
               path="/beeraluDetails/:docId"
               element={<BeeraluDetails />}
             />
-            
+
 <Route
               exact
               path="/coirDetails/:docId"
               element={<CoirDetails />}
             /> 
- {/*
+ 
 <Route
               exact
               path="/lakshaDetails/:docId"
@@ -144,7 +144,7 @@ function App() {
             />
 
 
-*/}
+
 
 
 
