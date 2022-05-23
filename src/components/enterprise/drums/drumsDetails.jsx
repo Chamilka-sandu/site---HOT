@@ -39,9 +39,9 @@ const DrumsDetails = () => {
         <div class="media align-items-end profile-head">
           <div class="profile mr-6" >
             <img
-              src={DrumsDetails.image}
+              src={drumsDetails.image}
               alt="..."
-              width="600" height="200"
+              width="800" height="200"
               class="rounded mb-2 img-thumbnail"
             />
            
