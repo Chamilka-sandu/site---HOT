@@ -37,16 +37,20 @@ const images = [
     url: "/img/brass.jpg",
     title: "Brass",
     width: "25%",
+    link: "./brass",
+
   },
   {
     url: "/img/carvings.jpg",
     title: "Carvings",
     width: "25%",
+    link: "./carving",
   },
   {
     url: "/img/laksha.png",
     title: "Laksha",
     width: "25%",
+   
   },
   {
     url: "/img/beeralu.jpg",

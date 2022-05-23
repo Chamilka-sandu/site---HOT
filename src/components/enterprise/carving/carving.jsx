@@ -2,25 +2,25 @@ import React, { useEffect, useState } from "react";
 import { Navigation } from "../../navigation";
 import { db } from "../../../database/firebase-config";
 import { collection, where, query, onSnapshot } from "@firebase/firestore";
-import "./drums.css";
+import "./carving.css";
 import bathikImg from "../../../data/img/b1.jpg";
-import DrumsTile from "./drumsTile";
+import CarvingTile from "./carvingTile";
 
 
-function Drums({ children }) {
-  const [drumsList, setDrumsList] = useState([]);
+function Carving({ children }) {
+  const [carvingList, setCarvingList] = useState([]);
 
   useEffect(() => {
     const q = query(
       collection(db, "Enterprises"),
-      where("type", "==", "drums")
+      where("type", "==", "carving")
     );
 
     onSnapshot(q, (querySnapshot) => {
       querySnapshot.docs.map((doc) => {
-        const drumsData = doc.data();
-        drumsData.docId = doc.id;
-        setDrumsList((arr) => [...arr, drumsData]);
+        const carvingData = doc.data();
+        carvingData.docId = doc.id;
+        setCarvingList((arr) => [...arr, carvingData]);
       });
     });
   }, []);
@@ -48,7 +48,7 @@ function Drums({ children }) {
           id="header "
           class="jumbotron text-center"
         >
-          <h1 class="display-3">DRUMS </h1>
+          <h1 class="display-3">CARVINGS </h1>
           <p class="lead">Marvel in the wonders of eclectic designs and patterns.</p>
         </section>
       </div>
@@ -61,9 +61,9 @@ function Drums({ children }) {
         <section id="gallery">
           <div class="container">
             <div class="row">
-              {drumsList &&
-                drumsList.map((drums, index) => {
-                  return <DrumsTile key={index} drums={drums} />;
+              {carvingList &&
+                carvingList.map((carving, index) => {
+                  return <CarvingTile key={index} carving={carving} />;
                 })}
             </div>
           </div>
@@ -73,4 +73,4 @@ function Drums({ children }) {
   );
 }
 
-export default Drums;
+export default Carving;

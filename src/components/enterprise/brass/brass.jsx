@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { Navigation } from "../../navigation";
+import { Navigation_log } from "../../navigation_log";
 import { db } from "../../../database/firebase-config";
 import { collection, where, query, onSnapshot } from "@firebase/firestore";
-import "./drums.css";
+import "./brass.css";
 import bathikImg from "../../../data/img/b1.jpg";
-import DrumsTile from "./drumsTile";
+import BrassTile from "./brassTile";
 
 
-function Drums({ children }) {
-  const [drumsList, setDrumsList] = useState([]);
+function Brass({ children }) {
+  const [brassList, setBrassList] = useState([]);
 
   useEffect(() => {
     const q = query(
       collection(db, "Enterprises"),
-      where("type", "==", "drums")
+      where("type", "==", "brass")
     );
 
     onSnapshot(q, (querySnapshot) => {
       querySnapshot.docs.map((doc) => {
-        const drumsData = doc.data();
-        drumsData.docId = doc.id;
-        setDrumsList((arr) => [...arr, drumsData]);
+        const brassData = doc.data();
+        brassData.docId = doc.id;
+        setBrassList((arr) => [...arr, brassData]);
       });
     });
   }, []);
@@ -34,7 +34,7 @@ function Drums({ children }) {
   return (
     <div>
       <div>
-        <Navigation />
+        <Navigation_log />
       </div>
 
       <div class="row">
@@ -48,7 +48,7 @@ function Drums({ children }) {
           id="header "
           class="jumbotron text-center"
         >
-          <h1 class="display-3">DRUMS </h1>
+          <h1 class="display-3">BRASS </h1>
           <p class="lead">Marvel in the wonders of eclectic designs and patterns.</p>
         </section>
       </div>
@@ -61,9 +61,9 @@ function Drums({ children }) {
         <section id="gallery">
           <div class="container">
             <div class="row">
-              {drumsList &&
-                drumsList.map((drums, index) => {
-                  return <DrumsTile key={index} drums={drums} />;
+              {brassList &&
+                brassList.map((brass, index) => {
+                  return <BrassTile key={index} brass={brass} />;
                 })}
             </div>
           </div>
@@ -73,4 +73,4 @@ function Drums({ children }) {
   );
 }
 
-export default Drums;
+export default Brass;
