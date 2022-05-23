@@ -3,7 +3,7 @@ import { Navigation } from "../../navigation";
 import { db } from "../../../database/firebase-config";
 import { collection, where, query, onSnapshot } from "@firebase/firestore";
 import "./drums.css";
-import bathikImg from "../../../data/img/b1.jpg";
+import bathikImg from "../../../data/img/HDrum.jpg";
 import DrumsTile from "./drumsTile";
 
 
