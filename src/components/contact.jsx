@@ -53,6 +53,7 @@ const Contact = (props) => {
                   Send an email to get in touch with us. We will get back to you
                   at the soonest possible!
                 </p>
+                <p> Register Your Business</p>
               </div>
               <form name="sentMessage" validate onSubmit={handleSubmit}>
                 <div className="row">
