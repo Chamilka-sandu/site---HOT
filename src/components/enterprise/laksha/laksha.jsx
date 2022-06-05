@@ -38,6 +38,16 @@ function Laksha({ children }) {
       </div>
 
       <div class="row">
+      <p
+        style={{
+          fontSize: "50px",
+          fontWeight: "800",
+          textAlign: "center",
+          
+        }}
+      >
+        WE ARE COMING SOON !
+      </p>
         <section
           style={{
             backgroundImage: `url(${bathikImg})`,
