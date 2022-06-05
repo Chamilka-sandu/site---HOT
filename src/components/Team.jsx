@@ -1,8 +1,13 @@
 import React from "react";
 import Scroll from "react-scroll";
 import { Navigation } from "./navigation";
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>;
+import { Helmet } from "react-helmet";
+import pawan from "../data/img/pawan.jpg";
+import anuja from "../data/img/anuja.jpg";
+import sachintha from "../data/img/sachintha.jpg";
+import thash from "../data/img/thash.jpg";
+import teamCaresoul from "./teamCaresoul";
+import "./Team.css";
 
 function Team() {
   return (
@@ -10,300 +15,152 @@ function Team() {
       <div>
         <Navigation />
       </div>
-      <div class="container">
 
+      <p
+        style={{
+          fontSize: "30px",
+          fontWeight: "800",
+          textAlign: "center",
+          color: "#013744",
+        }}
+      >
+        OUR PROFESSIONALS
+      </p>
 
-        <div class="row">
-          <div class="heading-title text-center">
-            <br /> <br /> <br /> <br />
-            <h3 class="text-uppercase" style={{color:'black'}}>Our professionals </h3>
-            <br /> <br /> <br />
-            <p class="p-top-30 half-txt">
-              Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.
-              Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.{" "}
-            </p>
-          </div>
+      <br></br>
+      <br></br>
 
-
-          <div class="row" style={{paddingTop:'100px', paddingLeft:'125px'}}>
-
-<div class="col-md-4 col-sm-4"><img
-            src="/img/T_anuja.jpg"
-            alt="team member"
-            class="img-responsive"
-            width="200px"
-            height="200px"
-          />
-</div>    
-
-<div class="col-md-8 col-sm-8">moda anuja moda anuja moda anuja moda anuja moda anuja</div>    
-
-
-</div>
-
-
-<div class="row" style={{paddingTop:'100px', paddingLeft:'125px'}}>
-
-<div class="col-md-4 col-sm-4"><img
-            src="/img/T_pawan.jpg"
-            alt="team member"
-            class="img-responsive"
-            width="200px"
-            height="200px"
-          />
-</div>    
-
-<div class="col-md-8 col-sm-8">moda anuja moda anuja moda anuja moda anuja moda anuja</div>    
-
-
-</div>
-
-
-
-
-<div class="row" style={{paddingTop:'100px', paddingLeft:'125px', textAlign: 'center'}}>
-
-<div class="col-md-6 col-sm-6" >
-<div class="team-member">
-              <div class="team-img" style={{paddingLeft:'180px'}}>
-                <br /> <br /> <br /> <br /> <br />
-                <img
-                  src="/img/T_sachintha.jpg"
-                  alt="team member"
-                  class="img-responsive"
-                  width="200px"
-                  height="200px"
-                  
-                />
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div id="testimonial-slider" className="owl-carousel">
+              <div className="testimonial">
+                <div className="pic">
+                  <img src={anuja} />
                 </div>
-                <br />
-                <div class="team-title">
-                  <h5>Franklin Harbet</h5>
-                  <span>HR Manager</span>
+                <p className="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Architecto commodi dolorum earum fugiat, fugit hic id, ipsum
+                  laborum minus nostrum numquam perspiciatis saepe velit.
+                </p>
+                <div className="testimonial-profile">
+                  <h3 className="title">Anuja</h3>
+                  <span className="post"> | President (2021/2022)</span>
                 </div>
-              
-              <div class="team-hover">
-                <div class="desk">
-                  <h4>Hi There !</h4>
-                  <p>I love to introduce myself as a hardcore Web Designer.</p>
+              </div>
+
+              <div className="testimonial">
+                <div className="pic">
+                  <img src={pawan} />
                 </div>
-                <div class="s-link">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-google-plus"></i>
-                  </a>
+                <p className="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Architecto commodi dolorum earum fugiat, fugit hic id, ipsum
+                  laborum minus nostrum numquam perspiciatis saepe velit.
+                </p>
+                <div className="testimonial-profile">
+                  <h3 className="title">Pawan</h3>
+                  <span className="post"> | Vice President (2021/2022)</span>
                 </div>
               </div>
             </div>
-</div>    
-
-<div class="col-md-6 col-sm-6">
-<div class="team-member">
-              <div class="team-img" style={{paddingLeft:'180px'}}>
-                <br /> <br /> <br /> <br /> <br />
-                <img
-                  src="/img/T_anuja.jpg"
-                  alt="team member"
-                  class="img-responsive"
-                  width="200px"
-                  height="200px"
-                  
-                />
-                </div>
-                <br />
-                <div class="team-title">
-                  <h5>Franklin Harbet</h5>
-                  <span>HR Manager</span>
-                </div>
-              
-              <div class="team-hover">
-                <div class="desk">
-                  <h4>Hi There !</h4>
-                  <p>I love to introduce myself as a hardcore Web Designer.</p>
-                </div>
-                <div class="s-link">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-google-plus"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-</div>  
-
-
-</div>
-
-
-
-
-          <div class="flex-container" style={{textAlign: 'center'}}>
-          <div class="col-md-4 col-sm-4">
-            <div class="team-member">
-              <div class="team-img" style={{paddingLeft:'100px'}}>
-                <br /> <br /> <br /> <br /> <br />
-                <img
-                  src="/img/T_anuja.jpg"
-                  alt="team member"
-                  class="img-responsive"
-                  width="200px"
-                  height="200px"
-                  
-                />
-                </div>
-                <br />
-                <div class="team-title">
-                  <h5>Franklin Harbet</h5>
-                  <span>HR Manager</span>
-                </div>
-              
-              <div class="team-hover">
-                <div class="desk">
-                  <h4>Hi There !</h4>
-                  <p>I love to introduce myself as a hardcore Web Designer.</p>
-                </div>
-                <div class="s-link">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-google-plus"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-4">
-            <div class="team-member">
-              <div class="team-img" style={{paddingLeft:'100px'}}>
-                <br /> <br /> <br /> <br /> <br />
-                <img
-                  src="/img/T_anuja.jpg"
-                  alt="team member"
-                  class="img-responsive"
-                  width="200px"
-                  height="200px"
-                  
-                />
-                </div>
-                <br />
-                <div class="team-title">
-                  <h5>Franklin Harbet</h5>
-                  <span>HR Manager</span>
-                </div>
-              
-              <div class="team-hover">
-                <div class="desk">
-                  <h4>Hi There !</h4>
-                  <p>I love to introduce myself as a hardcore Web Designer.</p>
-                </div>
-                <div class="s-link">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-google-plus"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="team-member">
-              <div class="team-img" style={{paddingLeft:'100px'}}>
-                <br /> <br /> <br /> <br /> <br />
-                <img
-                  src="/img/T_anuja.jpg"
-                  alt="team member"
-                  class="img-responsive"
-                  width="200px"
-                  height="200px"
-                  
-                />
-                </div>
-                <br />
-                <div class="team-title">
-                  <h5>Franklin Harbet</h5>
-                  <span>HR Manager</span>
-                </div>
-              
-              <div class="team-hover">
-                <div class="desk">
-                  <h4>Hi There !</h4>
-                  <p>I love to introduce myself as a hardcore Web Designer.</p>
-                </div>
-                <div class="s-link">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-google-plus"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-
-
-          <div class="row" style={{ paddingTop: "60px"}}>
-            <div class="team-member">
-              <div class="col-md-2 col-sm-2"></div>
-              <div
-                class="col-md-4 col-sm-4"
-                style={{ padding: "40px", paddingTop: "60px", paddingLeft:'200px'}}
-              >
-                <img
-                  src="/img/RACLogo.png"
-                  alt="team member"
-                  class="img-responsive"
-                  width="200px"
-                  height="200px"
-                 
-                />
-              </div>
-
-              <div class="col-md-4 col-sm-4"
-              style={{ paddingLeft:'100px'}}>
-                <img
-                  src="/img/logo.png"
-                  alt="team member"
-                  class="img-responsive"
-                  width="200px"
-                  height="200px"
-                />
-              </div>
-              <div class="col-md-2 col-sm-2"></div>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-4">
-
           </div>
         </div>
       </div>
 
-      <div id="footer">
+      <br></br>
+      <br></br>
+      <div class="demo">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-12">
+              <div id="testimonial3-slider" class="owl-carousel1">
+                <div class="testimonial3">
+                  <p class="description">
+                    Hi,
+                  I'm Sachintha Shehan project chairperson of Hands of Thambapanni.
+                  
+
+                  </p>
+                  <h3 class="title">Sachintha</h3>
+                  <span className="post">Project Chairperson</span>
+                  <div class="pic">
+                    <img src={sachintha} alt="anuja" />
+                  </div>
+                </div>
+                <div class="testimonial3">
+                  <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                   
+                  
+                  </p>
+                  <h3 class="title">Thashini</h3>
+                  <span className="post">Project Chairperson</span>
+                  <div class="pic">
+                    <img src={thash} alt="Thash" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br></br>
+      <br></br>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="testimonial2-slider" class="owl-carousel">
+              <div class="testimonial">
+                <div class="pic">
+                  <img src={sachintha} />
+                </div>
+                <p class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Architecto commodi dolorum earum fugiat, fugit hic id, ipsum
+                  laborum minus nostrum numquam perspiciatis saepe velit.
+                </p>
+                <div class="testimonial-profile">
+                  <h3 class="title">Malsha-</h3>
+                  <span class="post">Web Developer</span>
+                </div>
+              </div>
+
+              <div class="testimonial">
+                <div class="pic">
+                  <img src={thash} />
+                </div>
+                <p class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Architecto commodi dolorum earum fugiat, fugit hic id, ipsum
+                  laborum minus nostrum numquam perspiciatis saepe velit.
+                </p>
+                <div class="testimonial-profile">
+                  <h3 class="title">Thrividya-</h3>
+                  <span class="post">Web Designer</span>
+                </div>
+              </div>
+              <div class="testimonial">
+                <div class="pic">
+                  <img src={thash} />
+                </div>
+                <p class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Architecto commodi dolorum earum fugiat, fugit hic id, ipsum
+                  laborum minus nostrum numquam perspiciatis saepe velit.
+                </p>
+                <div class="testimonial-profile">
+                  <h3 class="title">Saduni-</h3>
+                  <span class="post">Web Designer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer" className="py-0 pt-3">
         <div className="container text-center">
           <p>
             &copy; A Project By The Rotaract Club Of Uva Wellassa University -

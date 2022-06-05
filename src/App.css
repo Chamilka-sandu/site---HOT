@@ -16,3 +16,7 @@
     width: 110%;
   }
 }
+
+.carousel-indicators {
+  width: auto
+}

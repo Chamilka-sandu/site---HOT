@@ -56,9 +56,8 @@ const Rate = () => {
       })}
       <div>
         {space}
-        <button type="submit" className="btn btn-custom btn-lg">
-          {" "}
-          click to Rate{" "}
+        <button type="submit" className="btn btn-custom btn-lg my-0">
+          click to Rate
         </button>
       </div>
     </form>

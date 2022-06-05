@@ -11,8 +11,8 @@ import ChatComponent from "./chatComponent";
 
 function Home() {
   return (
-    <div>
-      <div>
+    <div style={{position: 'relative'}}>
+      <div style={{zIndex: 10000, position: 'fixed', width: '100%'}}>
         <Navigation />
       </div>
       <div>

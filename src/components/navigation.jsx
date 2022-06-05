@@ -37,7 +37,7 @@ export const Navigation = () => {
       style={{ margin: "0px" }}
     >
       <div className="container-fluid">
-        <img src={logo} width="80px" height="80px" alt="" />
+        <img src={logo} width="50px" height="50px" alt="" />
         <Link
           to="/"
           style={{ height: "40px", fontSize: "20px" }}

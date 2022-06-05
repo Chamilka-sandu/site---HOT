@@ -45,8 +45,10 @@ const Contact = (props) => {
     <div className="bg-blue">
       <div id="contact">
         <div className="container">
+          
           <div className="col-md-6">
             <div className="row">
+
               <div className="section-title">
                 <h2>Get In Touch</h2>
                 <p>
@@ -55,6 +57,7 @@ const Contact = (props) => {
                 </p>
                 <p> Register Your Business</p>
               </div>
+
               <form name="sentMessage" validate onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-md-6">
@@ -106,11 +109,13 @@ const Contact = (props) => {
                   Send Message
                 </button>
               </form>
+
             </div>
           </div>
-          <div className="col-md-3 col-md-offset-1 contact-info">
+
+          <div className="col-md-4 col-md-offset-1 contact-info">
             <div className="contact-item">
-              <h3>Contact Info</h3>
+              <h3 className="mt-0">Contact Info</h3>
               <p>
                 <span>
                   <i className="fa fa-map-marker"></i> Address
@@ -122,7 +127,7 @@ const Contact = (props) => {
               <p>
                 <span>
                   <i className="fa fa-phone"></i> Phone
-                </span>{" "}
+                </span>
                 +94 712223619
               </p>
             </div>
@@ -130,7 +135,7 @@ const Contact = (props) => {
               <p>
                 <span>
                   <i className="fa fa-envelope-o"></i> Email
-                </span>{" "}
+                </span>
                 racuwub@gmail.com
               </p>
             </div>
@@ -144,17 +149,17 @@ const Contact = (props) => {
               <div className="social">
                 <ul>
                   <li>
-                    <a href="https://www.facebook.com/RACUWUBadulla/">
+                    <a style={{width: '50px'}} href="https://www.facebook.com/RACUWUBadulla/">
                       <i className="fa fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/in/rotaract-club-of-uva-wellassa-university-449b33192/?originalSubdomain=lk">
+                    <a style={{width: '50px'}} href="https://www.linkedin.com/in/rotaract-club-of-uva-wellassa-university-449b33192/?originalSubdomain=lk">
                       <i className="fa fa-linkedin"></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
+                    <a style={{width: '50px'}} href={props.data ? props.data.youtube : "/"}>
                       <i className="fa fa-youtube"></i>
                     </a>
                   </li>
@@ -164,7 +169,7 @@ const Contact = (props) => {
           </div>
         </div>
       </div>
-      <div id="footer">
+      <div id="footer" className="py-0 pt-3">
         <div className="container text-center">
           <p>
             &copy; A Project By The Rotaract Club Of Uva Wellassa University -
