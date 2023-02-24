@@ -4,9 +4,12 @@ import { ThemeProvider } from "styled-components";
 import Donation from "./donations";
 
 const config = {
-  width: "400px",
+   width: "400px",
   height: "500px",
   floating: true,
+  top: "50px",
+  left: "10px"
+  
 };
 const BotRedirect = ({ url, message }) => {
   return (
@@ -28,14 +31,36 @@ const theme = {
   botFontColor: "#fff",
   userBubbleColor: "white",
   userFontColor: "blue",
+
+  
+
 };
 
 class ChatComponent extends Component {
+
+ constructor(props) {
+    super(props);
+    this.state = {
+      headerTitle: "Assistent",
+    };
+  }
+
+  handleAcademicClick = () => {
+    this.setState({ headerTitle: "Academic" });
+  };
+  
+  
   render() {
+
+    
     return (
+
+      
       <ThemeProvider theme={theme}>
         <ChatBot
-          headerTitle="Assistant "
+          //headerTitle={headerTitle}
+          handleAcademicClick={this.handleAcademicClick}
+          headerTitle={this.state.headerTitle}
           //speechSynthesis={{ enable: true, lang: 'en' }}
 
           //headerTitle="Speech Recognition"
@@ -73,19 +98,22 @@ class ChatComponent extends Component {
               id: "intro-user1",
               options: [
                 {
-                  value: "one1",
-                  label: "Discover SMEs",
-                  trigger: "discover smes",
+                  
+                 value: "one1",
+                  label: "Academic",
+                  trigger: "discover acd",
+                  onClick: this.handleAcademicClick,
+
                 },
                 {
                   value: "one2",
-                  label: "Join Hands of Thambapanni",
+                  label: "Exames",
                   trigger: "join",
                 },
-                { value: "one3", label: "Support SMEs", trigger: "support" },
+                { value: "one3", label: "Staff", trigger: "support" },
                 {
                   value: "one4",
-                  label: "Get to know more about RACUWU-Badulla",
+                  label: "Students",
                   trigger: "details",
                 },
                 {
@@ -97,9 +125,9 @@ class ChatComponent extends Component {
               ],
             },
             {
-              id: "discover smes",
+              id: "discover acd",
               message:
-                "Cool! We’ve a list of brilliant SMEs categorized according to their products. You can select them here <link to the list of SME categories>",
+                "This is Academic part",
               trigger: "intro-user1",
             },
             {
@@ -108,12 +136,12 @@ class ChatComponent extends Component {
               options: [
                 {
                   value: "two1",
-                  label: "Partner with Hands of Thambapanni",
+                  label: "End exam",
                   trigger: "partner",
                 },
                 {
                   value: "two2",
-                  label: "Sponsor Hands of Thambapanni",
+                  label: "Mid Exam",
                   trigger: "sponsor",
                 },
               ],
@@ -121,7 +149,7 @@ class ChatComponent extends Component {
             {
               id: "partner",
               message:
-                "That’s great! Let’s discuss possible partnership opportunities in detail. We just need your contact information to reach out. Drop in your message here <get in touch link>",
+                "student details",
               end: true,
             },
             {

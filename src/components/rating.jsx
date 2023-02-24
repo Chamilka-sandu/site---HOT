@@ -50,7 +50,7 @@ const Rate = () => {
                 onMouseEnter={() => setHover(givenRating)}
                 onMouseLeave={() => setHover(null)}
               />
-            </Rating>
+            </Rating>  
           </label>
         );
       })}

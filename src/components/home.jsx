@@ -7,11 +7,17 @@ import Contact from "./contact";
 import { Header } from "./header";
 import { Navigation } from "./navigation";
 import HomeCarousel from "../HomeCarousel";
-import ChatComponent from "./chatComponent";
+//import ChatComponent from "./chatComponent";
+import App4 from "./ChatBot";
 
 function Home() {
   return (
-    <div style={{position: 'relative'}}>
+    <div style={{ position: 'relative' }}>
+      
+      <div style={{ position: 'absolute', left: '100px', top: '100px' }}>
+         <App4/>
+</div>
+      
       <div style={{zIndex: 10000, position: 'fixed', width: '100%'}}>
         <Navigation />
       </div>
@@ -30,9 +36,9 @@ function Home() {
       <div>
         <Contact />
       </div>
-      <div>
-        <ChatComponent />
-      </div>
+     {/* <div>
+        <SimpleChatbot />
+      </div> */}
     </div>
   );
 }
